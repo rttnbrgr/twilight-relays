@@ -1,0 +1,108 @@
+/* Schedule */
+
+/* #custom_block1 {
+  background-color: #d7df22;
+}
+#custom_block1 h1 {
+  color: black;
+  padding-bottom: 0.25em;
+  line-height: 1.1em;
+  border-bottom: 4px solid black;
+  max-width: 1200px;
+  margin: 0 auto 1rem;
+}
+#custom_block1 #schedule {
+  display: block;
+} */
+
+#custom_block1 #schedule .entry {
+  line-height: 1;
+  align-content: flex-start;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+#custom_block1 #schedule .time {
+  font-size: 200%;
+  flex: 0 0 4em;
+  /* letter-spacing: 2px; */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  background: black;
+  line-height: 2;
+  margin-right: 0.75rem;
+  /* text-indent: 1rem; */
+  color: #d7df22;
+  text-align: center;
+  padding-right: 0.2rem;
+}
+#custom_block1 #schedule .info-wrap {
+  flex: 0 1 11em;
+}
+#custom_block1 #schedule .title {
+  font-size: 180%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  flex: 0 1 11em;
+  position: relative;
+  /* height: 50px; */
+  /* line-height: 3; */
+}
+#custom_block1 #schedule .title::before {
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* transform: translateY(-100%); */
+  text-indent: 0;
+  line-height: 1;
+  font-size: 0.75rem;
+}
+#custom_block1 #schedule .type {
+  /* display: none; */
+  color: white;
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  /* transform: translateY(-100%); */
+  /* text-indent: 0; */
+  line-height: 1;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  text-align: left;
+  width: 100%;
+  padding-bottom: 0.125em;
+}
+
+/* Net New Styles - 2022-01-19 */
+#custom_block1 #schedule .entry,
+#custom_block1 #schedule .title {
+  color: #111;
+}
+
+/* Other styles from head on runner-space */
+.video_wrapper {
+  padding: 0 0 56.25% 0 !important;
+  height: 0 !important;
+}
+
+#wrapper_menu,
+#wrapper_menu.mobile {
+  display: block !important;
+}
+
+#wrapper_menu.mobile:before,
+#wrapper_menu.mobile .menu-section,
+#wrapper_select_mobile_section select.select_MF {
+  color: white;
+}
+
+.video_wrapper > div {
+  position: absolute !important;
+}
+
+#wrapper_menu.mobile #menu a.selected {
+  background: #000000;
+  color: #d7df22;
+}
