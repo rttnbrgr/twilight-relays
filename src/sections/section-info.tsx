@@ -17,14 +17,14 @@ const SectionInfo = () => (
     <Container>
       <SectionHeader>Info</SectionHeader>
       <div id="whoiam" className="block">
-        <p>Nike Jesuit Twilight Relays</p>
+        {/* <p>Nike Jesuit Twilight Relays</p> */}
         <p>
           <strong>
             JESUIT HIGH SCHOOL AND NIKE ARE PROUD TO PRESENT THE PACIFIC
             NORTHWEST’S PREMIER HIGH SCHOOL TRACK &amp; FIELD RELAY MEET.
           </strong>
         </p>
-        <p>
+        {/* <p>
           <strong>
             THE 20TH&nbsp;ANNUAL NIKE/JESUIT TWILIGHT RELAYS WILL FEATURE:
           </strong>
@@ -63,16 +63,7 @@ const SectionInfo = () => (
               Click here for entry info
             </a>
           </strong>
-        </p>
-        <div className="wrapper">
-          <div className="content">
-            <div className="body">
-              <div className="text_topblock text_botblock">
-                <div className="userhtml"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </p> */}
       </div>
     </Container>
 
