@@ -1,7 +1,10 @@
 import { extendTheme, ListItem } from "@chakra-ui/react";
 import { createBreakpoints } from "@chakra-ui/theme-tools";
 
-const fonts = { mono: `'Menlo', monospace` };
+const fonts = {
+  mono: `'Inconsolata', monospace`,
+  sans: `'Work Sans', sans-serif`
+};
 
 const breakpoints = createBreakpoints({
   sm: "40em",
