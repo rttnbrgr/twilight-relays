@@ -27,16 +27,18 @@ const scheduleStyles = {
 const SectionSchedule = () => {
   console.log("schedule", schedule);
   return (
-    <Box id="schedule" bg="altBg">
-      <Container>
-        <SectionHeader>Schedule</SectionHeader>
-        <SimpleGrid {...scheduleStyles}>
-          {schedule.map((x, i) => (
-            <ScheduleItem {...x}>{i}</ScheduleItem>
-          ))}
-        </SimpleGrid>
-      </Container>
-    </Box>
+    <div id="custom_block1">
+      <Box id="schedule" bg="altBg">
+        <Container maxW="1000px">
+          <SectionHeader>Schedule</SectionHeader>
+          <SimpleGrid {...scheduleStyles}>
+            {schedule.map((x, i) => (
+              <ScheduleItem {...x} key={i} />
+            ))}
+          </SimpleGrid>
+        </Container>
+      </Box>
+    </div>
   );
 };
 
