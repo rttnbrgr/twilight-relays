@@ -29,6 +29,11 @@ const theme = extendTheme({
   },
   fonts,
   breakpoints,
+  layerStyles: {
+    sectionBase: {
+      py: 4
+    }
+  },
   textStyles: {
     h1: {
       // you can also use responsive styles
@@ -52,7 +57,8 @@ const theme = extendTheme({
   components: {
     Container: {
       baseStyle: {
-        border: "1px solid pink"
+        border: "3px solid pink",
+        maxW: "1000px"
       }
     },
     ListItem: {

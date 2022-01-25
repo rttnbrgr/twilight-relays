@@ -29,7 +29,7 @@ const SectionSchedule = () => {
   return (
     <div id="custom_block1">
       <Box id="schedule" bg="altBg">
-        <Container maxW="1000px">
+        <Container>
           <SectionHeader>Schedule</SectionHeader>
           <SimpleGrid {...scheduleStyles}>
             {schedule.map((x, i) => (
