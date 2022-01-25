@@ -48,10 +48,25 @@ const theme = extendTheme({
       lineHeight: "110%",
       letterSpacing: "-1%",
       lh: 1,
-
       fontSize: "3em",
-      fontWeight: "600",
-      textTransform: "uppercase"
+      fontWeight: "800",
+      textTransform: "uppercase",
+      fontFamily: "sans"
+    },
+    navLink: {
+      // ported
+      textTransform: "uppercase",
+      letterSpacing: "0.05em",
+      fontFamily: "sans",
+      fontSize: "xl",
+      fontWeight: "700"
+    },
+    bodyLarge: {
+      textTransform: "uppercase",
+      letterSpacing: "1px",
+      fontFamily: "sans",
+      fontSize: "xl",
+      fontWeight: "700"
     }
   },
   components: {

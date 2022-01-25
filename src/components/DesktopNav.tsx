@@ -14,15 +14,16 @@ const desktopNavLinkStyles = {
   px: 4,
   py: 2,
   display: "inline-flex",
-  bg: "pink.500",
-  // textstyles
-  fontSize: "md"
-  // textTransform: "uppercase"
+  textStyle: "navLink",
+  color: "#6d8dae",
+  _hover: {
+    color: "white"
+  }
 };
 
 const DesktopNav = props => (
   <Box as="nav" bg="brand.black">
-    <List as="ul" display="flex" bg="red.600" justifyContent="center">
+    <List as="ul" display="flex" justifyContent="center">
       {navData.map((x, i) => (
         <ListItem key={i}>
           <ChakraLink
