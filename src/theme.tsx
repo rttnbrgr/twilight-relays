@@ -1,4 +1,4 @@
-import { extendTheme, ListItem } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react";
 import { createBreakpoints } from "@chakra-ui/theme-tools";
 
 const fonts = {
@@ -15,17 +15,30 @@ const breakpoints = createBreakpoints({
 
 const colorsBrand = {
   black: "#16161D",
-  volt: "#d7df22"
+  volt: "#d7df22",
+  white: "white"
+};
+
+const colorTokens = {
+  bg: colorsBrand.black,
+  onBg: colorsBrand.white,
+  altBg: colorsBrand.volt,
+  onAlt: colorsBrand.black // not in use
 };
 
 const theme = extendTheme({
+  styles: {
+    global: {
+      "html, body": {
+        bg: colorTokens.bg,
+        color: colorTokens.onBg
+      }
+    }
+  },
   colors: {
     black: "#16161D",
-    bg: "brand.black",
-    onBg: "#fff",
-    altBg: colorsBrand.volt,
-    onAlt: colorsBrand.black,
-    brand: { ...colorsBrand }
+    brand: { ...colorsBrand },
+    ...colorTokens
   },
   fonts,
   breakpoints,
