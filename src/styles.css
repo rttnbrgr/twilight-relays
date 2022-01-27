@@ -38,26 +38,6 @@
     font-size: 3.5em;
   }
 }
-#ad_event_top_custom_0_0::before {
-  content: "";
-  width: 100%;
-  position: relative;
-  display: block;
-  background: black url("https://twilight-relays.surge.sh/assets/banner.svg");
-  background-size: 90vw;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 10vw;
-  max-height: 7.5rem;
-}
-@media (min-width: 1200px) {
-  #ad_event_top_custom_0_0::before {
-    background-size: 1080px;
-  }
-}
-#ad_event_top_custom_0_0 #index-title {
-  display: none;
-}
 
 /**
  * 
