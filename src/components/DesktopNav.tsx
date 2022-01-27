@@ -15,7 +15,7 @@ const desktopNavLinkStyles = {
   py: 2,
   display: "inline-flex",
   textStyle: "navLink",
-  color: "#6d8dae",
+  color: "whiteAlpha.600",
   _hover: {
     color: "white"
   }
