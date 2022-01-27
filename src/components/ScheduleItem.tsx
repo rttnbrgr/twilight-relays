@@ -1,4 +1,12 @@
-import { Box, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  ResponsiveValue,
+  VStack,
+  HStack
+  // WhiteSpace,
+  // Position
+} from "@chakra-ui/react";
 
 type ScheduleItemProps = {
   time: string;
@@ -7,79 +15,47 @@ type ScheduleItemProps = {
   children?: React.ReactNode;
 };
 
-const entryStyles = {
-  // new
-  border: "1px solid white",
-  my: "3",
-  display: "flex",
-  // ported
-  lineHeight: "1",
-  alignContent: "flex-start",
-  alignItems: "center",
-  mb: "1rem"
-};
-
-const timeStyles = {
-  // new
-  // px: 2,
-  // py: 1,
-  // borderRadius: "full",
-  // bg: "black",
-  // color: "white",
-  // display: "inline-flex",
-  // lineHeight: 1
-  // ported
-  fontSize: "200%",
-  flex: "0 0 4em",
-  whiteSpace: "nowrap",
+const unverifiedStyles = {
+  whiteSpace: "nowrap" as ResponsiveValue<WhiteSpace>,
   overflow: "hidden",
-  textOverflow: "clip",
-  background: "black",
-  lineHeight: "2",
-  marginRight: "0.75rem",
-  color: "#d7df22",
-  textAlign: "center",
-  paddingRight: "0.2rem"
-};
-
-const infoWrapStyles = {
-  flex: "0 1 11em"
-};
-
-const typeStyles = {
-  color: "black",
-  lineHeight: "1",
-  fontSize: "0.75rem",
-  textTransform: "uppercase",
-  textAlign: "left",
-  width: "100%",
-  paddingBottom: "0.125em"
-};
-
-const titleStyles = {
-  fontSize: "180%",
-  whiteSpace: "nowrap",
-  overflow: "hidden",
-  textOverflow: "clip",
-  flex: "0 1 11em",
-  position: "relative",
-  color: "#111"
+  textOverflow: "clip"
 };
 
 const ScheduleItem = ({ time, type, title, children }: ScheduleItemProps) => (
-  <Box className="entry" {...entryStyles}>
-    <Box className="time" {...timeStyles}>
+  <HStack
+    className="entry"
+    spacing="2"
+    justifyContent="flex-start"
+    alignItems="center"
+    mb="1rem"
+    // debug
+    border="1px solid white"
+  >
+    <Box
+      className="time"
+      {...unverifiedStyles}
+      textStyle="scheduleTime"
+      textAlign="center"
+      layerStyle="colorScheme.altDark"
+      flexBasis="25%"
+      flexGrow={0}
+      flexShrink={0}
+    >
       {time}
     </Box>
-    <Box className="info-wrap" {...infoWrapStyles}>
-      <Box className="type" {...typeStyles}>
-        {type}
-      </Box>
-      <Box className="title" {...titleStyles}>
+    <VStack
+      spacing="0"
+      align="start"
+      flexBasis="75%"
+      flexGrow={0}
+      flexShrink={0}
+    >
+      <Text textStyle="scheduleType">{type}</Text>
+      <Text textStyle="scheduleTitle" {...unverifiedStyles}>
         {title}
-      </Box>
-    </Box>
-  </Box>
+      </Text>
+    </VStack>
+  </HStack>
 );
 
 export default ScheduleItem;

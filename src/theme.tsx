@@ -45,16 +45,19 @@ const theme = extendTheme({
   layerStyles: {
     sectionBase: {
       py: 4
+    },
+    colorScheme: {
+      onAlt: {
+        bg: "altBg",
+        color: "onAlt"
+      },
+      altDark: {
+        bg: "onAlt",
+        color: "altBg"
+      }
     }
   },
   textStyles: {
-    h1: {
-      // you can also use responsive styles
-      fontSize: ["48px", "72px"],
-      fontWeight: "bold",
-      lineHeight: "110%",
-      letterSpacing: "-2%"
-    },
     sectionHeader: {
       // fontSize: ["36px", "48px"],
       // fontWeight: "semibold",
@@ -80,6 +83,30 @@ const theme = extendTheme({
       fontFamily: "sans",
       fontSize: "xl",
       fontWeight: "700"
+    },
+    // get font families
+    // get sizes
+    // get responsive sizes
+    photoTitle: {},
+
+    scheduleTime: {
+      fontFamily: "mono",
+      fontSize: ["14px", "28px"],
+      fontWeight: "700",
+      lineHeight: "2"
+    },
+    scheduleType: {
+      fontFamily: "mono",
+      lineHeight: "1",
+      fontSize: "12px",
+      textTransform: "uppercase",
+      maxWidth: "224px"
+    },
+    scheduleTitle: {
+      fontFamily: "mono",
+      fontSize: "24px",
+      // fontWeight: "500",
+      lineHeight: "1"
     }
   },
   components: {

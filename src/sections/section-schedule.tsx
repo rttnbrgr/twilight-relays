@@ -28,7 +28,7 @@ const SectionSchedule = () => {
   console.log("schedule", schedule);
   return (
     <div id="custom_block1">
-      <Box id="schedule" bg="altBg">
+      <Box id="schedule" layerStyle="colorScheme.onAlt">
         <Container>
           <SectionHeader>Schedule</SectionHeader>
           <SimpleGrid {...scheduleStyles}>

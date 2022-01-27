@@ -18,7 +18,7 @@ export const schedule = [
   },
   {
     time: "2:00",
-    type: "Following Long Jump, Men on West Pit | Women on East Pit",
+    type: "Men on West Pit | Women on East Pit, Following Long Jump",
     title: "Triple Jump"
   },
 
