@@ -10,25 +10,6 @@
   left: 0;
 }
 
-/* Mobile First */
-#wrapper_menu.mobile {
-  display: none;
-}
-
-#wrapper_menu {
-  background-color: black;
-}
-@media (max-width: 686px) {
-  #wrapper_menu {
-    display: none;
-  }
-}
-
-#menu a {
-  color: #121212;
-  color: #4c4c4c;
-}
-
 @media (max-width: 540px) {
   #custom_block0 h1,
   #custom_block1 h1,
