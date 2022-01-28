@@ -8,7 +8,7 @@ const Index = () => (
   <Box>
     <Banner />
     <DesktopNav />
-    <TextStyles />
+    {/* <TextStyles /> */}
     <SectionInfo />
     <SectionSchedule />
     {/* Bumper */}
