@@ -4,7 +4,7 @@ import DesktopNav from "../components/DesktopNav";
 import SectionHeader from "../components/SectionHeader";
 import ImageBlockCTA from "../components/ImageBlockCTA";
 import { imageBlocks } from "../lib/imageBlocks";
-import { schedule } from "../data";
+import { schedule } from "../lib/schedule";
 import ScheduleItem from "../components/ScheduleItem";
 
 const Index = () => (
