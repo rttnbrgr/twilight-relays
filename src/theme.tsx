@@ -44,15 +44,20 @@ const theme = extendTheme({
   breakpoints,
   layerStyles: {
     sectionBase: {
-      py: 4
+      py: 6
     },
     colorScheme: {
+      default: {
+        bg: "bg",
+        color: "onBg"
+      },
       onAlt: {
         bg: "altBg",
         color: "onAlt"
       },
       altDark: {
-        bg: "onAlt",
+        // bg: "onAlt",
+        bg: "whiteAlpha.100",
         color: "altBg"
       }
     }
@@ -116,8 +121,9 @@ const theme = extendTheme({
   components: {
     Container: {
       baseStyle: {
-        border: "3px solid pink",
         maxW: "1000px"
+        // debug
+        // border: "3px solid pink"
       }
     },
     ListItem: {

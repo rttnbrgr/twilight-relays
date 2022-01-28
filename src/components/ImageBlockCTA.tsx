@@ -13,6 +13,7 @@ const ImageBlockCTA = ({ url, imageSrc, title }) => (
     </AspectRatio>
     <LinkOverlay
       href={url}
+      isExternal
       display="block"
       textStyle="photoTitle"
       textAlign="center"

@@ -37,10 +37,13 @@ type SectionHeaderProps = {
 
 const sectionHeaderStyles = {
   color: "onBg",
-  pb: 1,
+  pb: 2,
   borderBottomWidth: "2px",
   borderColor: "onBg",
-  textAlign: "center"
+  textAlign: "center",
+  mb: 4,
+  maxWidth: "600px",
+  mx: "auto"
 };
 
 const SectionHeader = ({ children = "section header" }: SectionHeaderProps) => (

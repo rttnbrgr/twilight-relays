@@ -10,7 +10,7 @@ import NextImage from "next/image";
 type BannerProps = { title: string };
 
 export const Banner = ({ title }: BannerProps) => (
-  <Flex justifyContent="center" alignItems="center" py="4">
+  <Flex justifyContent="center" alignItems="center" py="4" pt='8'>
     <Container maxWidth="1000px">
       {/* menu button */}
 

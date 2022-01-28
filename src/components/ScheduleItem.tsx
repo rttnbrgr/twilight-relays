@@ -29,13 +29,14 @@ const ScheduleItem = ({ time, type, title, children }: ScheduleItemProps) => (
     alignItems="center"
     mb="1rem"
     // debug
-    border="1px solid white"
+    // border="1px solid white"
   >
     <Box
       className="time"
       {...unverifiedStyles}
       textStyle="scheduleTime"
       textAlign="center"
+      // layerStyle="colorScheme.altDark"
       layerStyle="colorScheme.altDark"
       flexBasis="25%"
       flexGrow={0}
