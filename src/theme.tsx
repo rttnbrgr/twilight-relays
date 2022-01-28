@@ -70,7 +70,6 @@ const theme = extendTheme({
       fontFamily: "sans"
     },
     navLink: {
-      // ported
       textTransform: "uppercase",
       letterSpacing: "0.05em",
       fontFamily: "sans",
@@ -84,10 +83,16 @@ const theme = extendTheme({
       fontSize: "xl",
       fontWeight: "700"
     },
-    // get font families
-    // get sizes
+    // get font families ✅
+    // get sizes  ✅
     // get responsive sizes
-    photoTitle: {},
+    photoTitle: {
+      fontFamily: "mono",
+      fontSize: ["18px"],
+      lineHeight: "1.5",
+      textTransform: "uppercase",
+      letterSpacing: "2px"
+    },
 
     scheduleTime: {
       fontFamily: "mono",
@@ -105,7 +110,6 @@ const theme = extendTheme({
     scheduleTitle: {
       fontFamily: "mono",
       fontSize: "24px",
-      // fontWeight: "500",
       lineHeight: "1"
     }
   },

@@ -3,7 +3,12 @@ import {
   Flex,
   Link as ChakraLink,
   Text,
-  Container
+  Container,
+  LinkBox,
+  LinkOverlay,
+  AspectRatio,
+  Image,
+  SimpleGrid
 } from "@chakra-ui/react";
 import SectionHeader from "../components/SectionHeader";
 
@@ -31,31 +36,32 @@ const fooData = [
 ];
 
 const BlockCTA = ({ url, imageSrc, title }) => (
-  <Box
-    display="flex"
+  <LinkBox
+    as="article"
+    // display="flex"
     flex="0 0 100%"
     mb="1.25rem"
     position="relative"
     flexBasis={["100%", "calc(33.33333% - 0.25rem)"]}
   >
-    <a href={url}>
-      <img src={imageSrc} />
-      <Box
-        className="title"
-        bg="black"
-        color="#d7df22"
-        lineHeight="2"
-        transition="0.3s ease-in-out"
-        textAlign="center"
-        _hover={{
-          bg: "#d7df22",
-          color: "black"
-        }}
-      >
-        {title}
-      </Box>
-    </a>
-  </Box>
+    <AspectRatio ratio={16 / 9}>
+      <Image src={imageSrc} objectPosition="top left" />
+    </AspectRatio>
+    <LinkOverlay
+      href={url}
+      display="block"
+      textStyle="photoTitle"
+      textAlign="center"
+      layerStyle="colorScheme.altDark"
+      py="1"
+      transition="0.3s ease-in-out"
+      _hover={{
+        layerStyle: "colorScheme.onAlt"
+      }}
+    >
+      {title}
+    </LinkOverlay>
+  </LinkBox>
 );
 
 const SectionInfo = () => (
@@ -67,33 +73,12 @@ const SectionInfo = () => (
         Jesuit High School and Nike are Proud to present the Pacific Northwest’s
         premier high school track & field relay meet.
       </Text>
-      {/* Photo CTA */}
-      <Box id="cta">
-        <div>
-          <a href="https://www.athletic.net/TrackAndField/meet/440410/info">
-            <img src="https://cdn.runnerspace.com/i/customsites/twilight/dummy.png" />
-            <span className="title">Info</span>
-          </a>
-        </div>
-        <div>
-          <a href="https://www.athletic.net/TrackAndField/meet/440410/info/133218">
-            <img src="https://cdn.runnerspace.com/i/customsites/twilight/dummy.png" />
-            <span className="title">Records</span>
-          </a>
-        </div>
-        <div>
-          <a href="https://www.twilight-relays.com/eprofile.php?event_id=96&amp;do=videos&amp;video_id=273064">
-            <img src="https://cdn.runnerspace.com/i/customsites/twilight/dummy.png" />
-            <span className="title">Live Webcast</span>
-          </a>
-        </div>
-      </Box>
       {/* Blocks */}
-      <Box display="flex" flexWrap="wrap">
+      <SimpleGrid display="flex" flexWrap="wrap" columnGap="0">
         {fooData.map(({ url, imageSrc, title }, i) => (
           <BlockCTA url={url} imageSrc={imageSrc} title={title} key={i} />
         ))}
-      </Box>
+      </SimpleGrid>
     </Container>
   </Box>
 );
