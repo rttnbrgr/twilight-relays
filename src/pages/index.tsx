@@ -1,17 +1,17 @@
 import { Box, Text, Container, VStack, SimpleGrid } from "@chakra-ui/react";
-import { SectionSchedule } from "../sections";
 import { Banner } from "../components/Banner";
 import DesktopNav from "../components/DesktopNav";
-import TextStyles from "../components/TextStyles";
 import SectionHeader from "../components/SectionHeader";
 import ImageBlockCTA from "../components/ImageBlockCTA";
 import { imageBlocks } from "../lib/imageBlocks";
+import { schedule } from "../data";
+import ScheduleItem from "../components/ScheduleItem";
 
 const Index = () => (
   <Box>
     <Banner />
     <DesktopNav />
-    {/* <TextStyles /> */}
+
     {/* Info */}
     <Box>
       <Container>
@@ -34,8 +34,19 @@ const Index = () => (
         </SimpleGrid>
       </Container>
     </Box>
+
     {/* Schedule */}
-    <SectionSchedule />
+    <Box id="schedule" layerStyle="colorScheme.onAlt">
+      <Container>
+        <SectionHeader>Schedule</SectionHeader>
+        <SimpleGrid display="grid" width="100%" columns={2} columnGap="4em">
+          {schedule.map((x, i) => (
+            <ScheduleItem {...x} key={i} />
+          ))}
+        </SimpleGrid>
+      </Container>
+    </Box>
+
     {/* Bumper */}
     <Box py="8" />
   </Box>
