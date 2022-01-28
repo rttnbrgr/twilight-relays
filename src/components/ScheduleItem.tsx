@@ -16,9 +16,9 @@ type ScheduleItemProps = {
 };
 
 const unverifiedStyles = {
-  whiteSpace: "nowrap" as ResponsiveValue<WhiteSpace>,
-  overflow: "hidden",
-  textOverflow: "clip"
+  // whiteSpace: "nowrap" as ResponsiveValue<WhiteSpace>,
+  // overflow: "hidden",
+  // textOverflow: "clip"
 };
 
 const ScheduleItem = ({ time, type, title, children }: ScheduleItemProps) => (
