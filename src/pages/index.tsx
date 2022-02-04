@@ -1,56 +1,93 @@
-import {
-  Link as ChakraLink,
-  Text,
-  Code,
-  List,
-  ListIcon,
-  ListItem,
-} from '@chakra-ui/react'
-import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons'
+import { Box, Text, Container, VStack, SimpleGrid } from "@chakra-ui/react";
+import { Banner } from "../components/Banner";
+import Nav from "../components/Nav";
+import SectionHeader from "../components/SectionHeader";
+import ImageBlockCTA from "../components/ImageBlockCTA";
+import { imageBlocks } from "../lib/imageBlocks";
+import { schedule } from "../lib/schedule";
+import ScheduleItem from "../components/ScheduleItem";
+import useToggle from "../hooks/index";
 
-import { Hero } from '../components/Hero'
-import { Container } from '../components/Container'
-import { Main } from '../components/Main'
-import { DarkModeSwitch } from '../components/DarkModeSwitch'
-import { CTA } from '../components/CTA'
-import { Footer } from '../components/Footer'
+const Index = () => {
+  const [isOn, toggleIsOn] = useToggle(false);
+  return (
+    <Box>
+      <Banner toggleIsOpen={toggleIsOn} isOpen={isOn} />
+      <Nav isOpen={isOn} />
 
-const Index = () => (
-  <Container height="100vh">
-    <Hero />
-    <Main>
-      <Text>
-        Example repository of <Code>Next.js</Code> + <Code>chakra-ui</Code> +{' '}
-        <Code>TypeScript</Code>.
-      </Text>
-
-      <List spacing={3} my={0}>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink
-            isExternal
-            href="https://chakra-ui.com"
-            flexGrow={1}
-            mr={2}
+      {/* Info */}
+      <Box layerStyle="sectionBase">
+        <Container>
+          <SectionHeader>Info</SectionHeader>
+          {/* Text */}
+          <Text
+            textStyle="bodyLarge"
+            textAlign="center"
+            maxWidth="600"
+            mx="auto"
+            mb="4"
           >
-            Chakra UI <LinkIcon />
-          </ChakraLink>
-        </ListItem>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink isExternal href="https://nextjs.org" flexGrow={1} mr={2}>
-            Next.js <LinkIcon />
-          </ChakraLink>
-        </ListItem>
-      </List>
-    </Main>
+            Jesuit High School and Nike are Proud to present the Pacific
+            Northwest’s premier high school track & field relay meet.
+          </Text>
+          {/* Blocks */}
+          <SimpleGrid
+            // display="flex"
+            // flexWrap="wrap"
+            columnGap="4"
+            rowGap="4"
+            maxWidth={{
+              base: "316px",
+              sm: "initial"
+            }}
+            mx={{ base: "auto" }}
+            columns={{
+              base: 1,
+              sm: 3
+            }}
+          >
+            {imageBlocks.map(({ url, imageSrc, title }, i) => (
+              <ImageBlockCTA
+                url={url}
+                imageSrc={imageSrc}
+                title={title}
+                key={i}
+              />
+            ))}
+          </SimpleGrid>
+        </Container>
+      </Box>
 
-    <DarkModeSwitch />
-    <Footer>
-      <Text>Next ❤️ Chakra</Text>
-    </Footer>
-    <CTA />
-  </Container>
-)
+      {/* Schedule */}
+      <Box id="schedule" layerStyle="sectionBase">
+        <Container>
+          <SectionHeader>Schedule</SectionHeader>
+          <SimpleGrid
+            display="grid"
+            width="100%"
+            columns={{
+              base: 1,
+              sm: 2
+            }}
+            columnGap="4em"
+            rowGap="4"
+            maxWidth={{
+              base: "316px",
+              sm: "initial"
+            }}
+            mx={{ base: "auto" }}
+          >
+            {schedule.map((x, i) => (
+              <ScheduleItem {...x} key={i} />
+            ))}
+          </SimpleGrid>
+        </Container>
+      </Box>
 
-export default Index
+      {/* Bumper */}
+      <Box py="8" />
+    </Box>
+  );
+};
+
+export default Index;
