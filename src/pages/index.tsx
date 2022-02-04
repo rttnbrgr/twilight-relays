@@ -12,50 +12,51 @@ const Index = () => (
     <Banner />
     <DesktopNav />
 
-    {/* Info */}
-    <Box layerStyle="sectionBase">
-      <Container>
-        <SectionHeader>Info</SectionHeader>
-        {/* Text */}
-        <Text
-          textStyle="bodyLarge"
-          textAlign="center"
-          maxWidth="600"
-          mx="auto"
-          mb="4"
-        >
-          Jesuit High School and Nike are Proud to present the Pacific
-          Northwest’s premier high school track & field relay meet.
-        </Text>
-        {/* Blocks */}
-        <SimpleGrid display="flex" flexWrap="wrap" columnGap="0">
-          {imageBlocks.map(({ url, imageSrc, title }, i) => (
-            <ImageBlockCTA
-              url={url}
-              imageSrc={imageSrc}
-              title={title}
-              key={i}
-            />
-          ))}
-        </SimpleGrid>
-      </Container>
-    </Box>
+      {/* Info */}
+      <Box layerStyle="sectionBase">
+        <Container>
+          <SectionHeader>Info</SectionHeader>
+          {/* Text */}
+          <Text
+            textStyle="bodyLarge"
+            textAlign="center"
+            maxWidth="600"
+            mx="auto"
+            mb="4"
+          >
+            Jesuit High School and Nike are Proud to present the Pacific
+            Northwest’s premier high school track & field relay meet.
+          </Text>
+          {/* Blocks */}
+          <SimpleGrid display="flex" flexWrap="wrap" columnGap="0">
+            {imageBlocks.map(({ url, imageSrc, title }, i) => (
+              <ImageBlockCTA
+                url={url}
+                imageSrc={imageSrc}
+                title={title}
+                key={i}
+              />
+            ))}
+          </SimpleGrid>
+        </Container>
+      </Box>
 
-    {/* Schedule */}
-    <Box id="schedule" layerStyle="sectionBase">
-      <Container>
-        <SectionHeader>Schedule</SectionHeader>
-        <SimpleGrid display="grid" width="100%" columns={2} columnGap="4em">
-          {schedule.map((x, i) => (
-            <ScheduleItem {...x} key={i} />
-          ))}
-        </SimpleGrid>
-      </Container>
-    </Box>
+      {/* Schedule */}
+      <Box id="schedule" layerStyle="sectionBase">
+        <Container>
+          <SectionHeader>Schedule</SectionHeader>
+          <SimpleGrid display="grid" width="100%" columns={2} columnGap="4em">
+            {schedule.map((x, i) => (
+              <ScheduleItem {...x} key={i} />
+            ))}
+          </SimpleGrid>
+        </Container>
+      </Box>
 
-    {/* Bumper */}
-    <Box py="8" />
-  </Box>
-);
+      {/* Bumper */}
+      <Box py="8" />
+    </Box>
+  );
+};
 
 export default Index;
