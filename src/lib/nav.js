@@ -19,11 +19,6 @@ const navLinks = [
     url: "https://www.twilight-relays.com/eprofile.php?do=videos&event_id=96",
     external: true
   }
-  // {
-  //   text: "foo",
-  //   url: "#",
-  //   external: true
-  // }
 ];
 
 export default navLinks;

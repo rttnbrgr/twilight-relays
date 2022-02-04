@@ -1,16 +1,19 @@
 import { Box, Text, Container, VStack, SimpleGrid } from "@chakra-ui/react";
 import { Banner } from "../components/Banner";
-import DesktopNav from "../components/DesktopNav";
+import Nav from "../components/Nav";
 import SectionHeader from "../components/SectionHeader";
 import ImageBlockCTA from "../components/ImageBlockCTA";
 import { imageBlocks } from "../lib/imageBlocks";
 import { schedule } from "../lib/schedule";
 import ScheduleItem from "../components/ScheduleItem";
+import useToggle from "../hooks/index";
 
-const Index = () => (
-  <Box>
-    <Banner />
-    <DesktopNav />
+const Index = () => {
+  const [isOn, toggleIsOn] = useToggle(false);
+  return (
+    <Box>
+      <Banner toggleIsOpen={toggleIsOn} isOpen={isOn} />
+      <Nav isOpen={isOn} />
 
       {/* Info */}
       <Box layerStyle="sectionBase">

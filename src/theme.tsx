@@ -42,9 +42,22 @@ const theme = extendTheme({
   },
   fonts,
   breakpoints,
+  sizes: {
+    containerDefault: "1000px",
+    containerSingle: "800px"
+  },
   layerStyles: {
     sectionBase: {
       py: 6
+    },
+    mqDebug: {
+      bg: {
+        base: "red.500",
+        sm: "green.500",
+        md: "purple.500",
+        lg: "yellow.500",
+        xl: "pink.500"
+      }
     },
     colorScheme: {
       default: {
@@ -121,9 +134,16 @@ const theme = extendTheme({
   components: {
     Container: {
       baseStyle: {
-        maxW: "1000px"
+        // maxW: "1000px"
+        maxW: "containerDefault",
+        px: {
+          base: 4,
+          md: 8
+        },
+        mx: "auto",
         // debug
-        // border: "3px solid pink"
+        border: "3px solid pink",
+        overflow: "hidden"
       }
     },
     ListItem: {
