@@ -11,7 +11,10 @@ const sectionHeaderStyles = {
   borderColor: "onBg",
   textAlign: "center",
   mb: 4,
-  maxWidth: "600px",
+  maxWidth: {
+    base: "400px",
+    sm: "600px"
+  },
   mx: "auto"
 };
 
@@ -24,7 +27,10 @@ const SectionHeader = ({ children = "section header" }: SectionHeaderProps) => (
     borderColor="onBg"
     textAlign="center"
     mb={4}
-    maxWidth="600px"
+    maxWidth={{
+      base: "400px",
+      sm: "600px"
+    }}
     mx="auto"
   >
     <Text textStyle="sectionHeader">{children}</Text>

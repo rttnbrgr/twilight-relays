@@ -31,7 +31,21 @@ const Index = () => {
             Northwest’s premier high school track & field relay meet.
           </Text>
           {/* Blocks */}
-          <SimpleGrid display="flex" flexWrap="wrap" columnGap="0">
+          <SimpleGrid
+            // display="flex"
+            // flexWrap="wrap"
+            columnGap="4"
+            rowGap="4"
+            maxWidth={{
+              base: "316px",
+              sm: "initial"
+            }}
+            mx={{ base: "auto" }}
+            columns={{
+              base: 1,
+              sm: 3
+            }}
+          >
             {imageBlocks.map(({ url, imageSrc, title }, i) => (
               <ImageBlockCTA
                 url={url}
@@ -48,7 +62,21 @@ const Index = () => {
       <Box id="schedule" layerStyle="sectionBase">
         <Container>
           <SectionHeader>Schedule</SectionHeader>
-          <SimpleGrid display="grid" width="100%" columns={2} columnGap="4em">
+          <SimpleGrid
+            display="grid"
+            width="100%"
+            columns={{
+              base: 1,
+              sm: 2
+            }}
+            columnGap="4em"
+            rowGap="4"
+            maxWidth={{
+              base: "316px",
+              sm: "initial"
+            }}
+            mx={{ base: "auto" }}
+          >
             {schedule.map((x, i) => (
               <ScheduleItem {...x} key={i} />
             ))}

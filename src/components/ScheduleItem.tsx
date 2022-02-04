@@ -12,8 +12,11 @@ const ScheduleItem = ({ time, type, title, children }: ScheduleItemProps) => (
     className="entry"
     spacing="2"
     justifyContent="flex-start"
-    alignItems="center"
-    mb="1rem"
+    alignItems={{
+      base: "flex-start",
+      sm: "center"
+    }}
+    // mb="1rem"
     // debug
     // border="1px solid white"
   >
@@ -22,7 +25,10 @@ const ScheduleItem = ({ time, type, title, children }: ScheduleItemProps) => (
       textStyle="scheduleTime"
       textAlign="center"
       layerStyle="colorScheme.altDark"
-      flexBasis="25%"
+      flexBasis={{
+        base: "15%",
+        sm: "25%"
+      }}
       flexGrow={0}
       flexShrink={0}
     >
