@@ -1,24 +1,10 @@
-import {
-  Box,
-  Text,
-  ResponsiveValue,
-  VStack,
-  HStack
-  // WhiteSpace,
-  // Position
-} from "@chakra-ui/react";
+import { Box, Text, VStack, HStack, BoxProps } from "@chakra-ui/react";
 
 type ScheduleItemProps = {
   time: string;
   type?: string;
   title: string;
   children?: React.ReactNode;
-};
-
-const unverifiedStyles = {
-  // whiteSpace: "nowrap" as ResponsiveValue<WhiteSpace>,
-  // overflow: "hidden",
-  // textOverflow: "clip"
 };
 
 const ScheduleItem = ({ time, type, title, children }: ScheduleItemProps) => (
@@ -33,10 +19,8 @@ const ScheduleItem = ({ time, type, title, children }: ScheduleItemProps) => (
   >
     <Box
       className="time"
-      {...unverifiedStyles}
       textStyle="scheduleTime"
       textAlign="center"
-      // layerStyle="colorScheme.altDark"
       layerStyle="colorScheme.altDark"
       flexBasis="25%"
       flexGrow={0}
@@ -52,9 +36,7 @@ const ScheduleItem = ({ time, type, title, children }: ScheduleItemProps) => (
       flexShrink={0}
     >
       <Text textStyle="scheduleType">{type}</Text>
-      <Text textStyle="scheduleTitle" {...unverifiedStyles}>
-        {title}
-      </Text>
+      <Text textStyle="scheduleTitle">{title}</Text>
     </VStack>
   </HStack>
 );
