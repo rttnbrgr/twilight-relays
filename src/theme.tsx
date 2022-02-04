@@ -142,7 +142,7 @@ const theme = extendTheme({
         },
         mx: "auto",
         // debug
-        border: "3px solid pink",
+        // border: "3px solid pink",
         overflow: "hidden"
       }
     },

@@ -66,12 +66,18 @@ export const Banner = ({ toggleIsOpen, isOpen }: BannerProps) => {
             sm: "none"
           }}
           onClick={toggleIsOpen}
+          bg="transparent"
+          _hover={{
+            bg: "transparent"
+          }}
         />
         <Spacer
           display={{
             base: "inline-flex",
             sm: "none"
           }}
+          flexBasis="6"
+          flexShrink={0}
         />
         <ChakraImage
           alt='"Twilight Relays"'
