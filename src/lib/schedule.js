@@ -70,32 +70,32 @@ export const schedule = [
   {
     time: "2:45",
     type: "Women",
-    title: "3000m Run"
-  },
-  {
-    time: "3:00",
-    type: "Men",
-    title: "3000m Run"
-  },
-  {
-    time: "3:15",
-    type: "Women",
-    title: "100m"
-  },
-  {
-    time: "3:35",
-    type: "Men",
-    title: "100m"
-  },
-  {
-    time: "4:00",
-    type: "Women",
     title: "1500m"
+  },
+  {
+    time: "3:05",
+    type: "Men",
+    title: "1500m"
+  },
+  {
+    time: "3:25",
+    type: "Women",
+    title: "100m"
+  },
+  {
+    time: "3:45",
+    type: "Men",
+    title: "100m"
+  },
+  {
+    time: "4:05",
+    type: "Women",
+    title: "Distance Medley"
   },
   {
     time: "4:20",
     type: "Men",
-    title: "1500m"
+    title: "Distance Medley"
   },
   {
     time: "4:35",
@@ -110,76 +110,78 @@ export const schedule = [
   {
     time: "5:15",
     type: "Women",
-    title: "Distance Medley"
+    title: "3000m Run"
   },
   {
     time: "5:30",
     type: "Men",
-    title: "Distance Medley"
+    title: "3000m Run"
   },
   {
-    time: "5:50",
-    title: "Opening Ceremony"
+    time: "5:45",
+    type: "Women",
+    title: "Twilight 3200M"
   },
   {
     time: "6:00",
-    type: "Women",
-    title: "Elite Invite 100M"
-  },
-  {
-    time: "6:05",
     type: "Men",
-    title: "Elite Invite 100M"
+    title: "Twilight 3200M"
   },
+
   {
-    time: "6:15",
-    type: "Women",
-    title: "Elite Twilight Mile"
+    time: "6:20",
+    title: "Opening Ceremony"
   },
+
   {
     time: "6:30",
-    type: "Men",
-    title: "Elite Twilight Mile"
+    type: "Women",
+    title: "Elite Invite 100M"
   },
   {
-    time: "6:40",
+    time: "6:35",
+    type: "Men",
+    title: "Elite Invite 100M"
+  },
+  {
+    time: "6:45",
     type: "Women",
-    title: "4x800 Relay"
+    title: "Elite Twilight Mile"
   },
   {
     time: "7:00",
     type: "Men",
+    title: "Elite Twilight Mile"
+  },
+  {
+    time: "7:10",
+    type: "Women",
     title: "4x800 Relay"
   },
   {
-    time: "7:20",
-    type: "Women",
-    title: "4x100 Relay"
-  },
-  {
-    time: "7:35",
+    time: "7:30",
     type: "Men",
-    title: "4x100 Relay"
+    title: "4x800 Relay"
   },
   {
     time: "7:50",
     type: "Women",
-    title: "Distance Medley"
+    title: "4x100 Relay"
   },
   {
     time: "8:05",
     type: "Men",
-    title: "Distance Medley"
+    title: "4x100 Relay"
   },
   {
     time: "8:20",
     type: "Women",
-    title: "Twilight 3200M"
+    title: "Distance Medley"
   },
   {
     time: "8:35",
     type: "Men",
-    title: "Twilight 3200M"
+    title: "Distance Medley"
   },
   {
     time: "8:50",
