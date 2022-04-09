@@ -1,4 +1,5 @@
 import { Box, Text, Container, VStack, SimpleGrid } from "@chakra-ui/react";
+import { Head } from "next/document";
 import { Banner } from "../components/Banner";
 import Nav from "../components/Nav";
 import SectionHeader from "../components/SectionHeader";
@@ -8,9 +9,45 @@ import { schedule } from "../lib/schedule";
 import ScheduleItem from "../components/ScheduleItem";
 import useToggle from "../hooks/index";
 
+const SEO = {
+  title: 'Twilight Relays 2022',
+  description: "Welcome to the homepage of Twilight Relays",
+  siteName: 'Twilight Relays 2022'
+}
+
 const Index = () => {
   const [isOn, toggleIsOn] = useToggle(false);
   return (
+    <>
+    <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+        <title>{SEO.title}</title>
+        <meta name="description" content={SEO.description}></meta>
+
+        {/* Twitter */}
+        {/* <meta name="twitter:card" content="summary" key="twcard" />
+        <meta
+          name="twitter:creator"
+          content={SEO.twitterHandle}
+          key="twhandle"
+        /> */}
+
+        {/* Open Graph */}
+        {/* <meta property="og:url" content={SEO.currentURL} key="ogurl" />
+        <meta
+          property="og:image"
+          content={SEO.previewImage.src}
+          key="ogimage"
+        /> */}
+        <meta property="og:site_name" content={SEO.siteName} key="ogsitename" />
+        <meta property="og:title" content={SEO.title} key="ogtitle" />
+        <meta
+          property="og:description"
+          content={SEO.description}
+          key="ogdesc"
+        />
+      </Head>
     <Box>
       <Banner toggleIsOpen={toggleIsOn} isOpen={isOn} />
       <Nav isOpen={isOn} />
@@ -87,6 +124,7 @@ const Index = () => {
       {/* Bumper */}
       <Box py="8" />
     </Box>
+    </>
   );
 };
 
