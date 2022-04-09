@@ -1,5 +1,5 @@
 import { Box, Text, Container, VStack, SimpleGrid } from "@chakra-ui/react";
-import { Head } from "next/document";
+import Head from "next/head";
 import { Banner } from "../components/Banner";
 import Nav from "../components/Nav";
 import SectionHeader from "../components/SectionHeader";
