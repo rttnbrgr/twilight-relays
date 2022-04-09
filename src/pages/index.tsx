@@ -83,12 +83,14 @@ const Index = () => {
               sm: 3
             }}
           >
-            {imageBlocks.map(({ url, imageSrc, title }, i) => (
+            {imageBlocks.map(({ url, imageSrc, title, height, width }, i) => (
               <ImageBlockCTA
                 url={url}
                 imageSrc={imageSrc}
                 title={title}
                 key={i}
+                height={height}
+                width={width}
               />
             ))}
           </SimpleGrid>

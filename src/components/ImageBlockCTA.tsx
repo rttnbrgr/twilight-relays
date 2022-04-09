@@ -1,6 +1,6 @@
 import { LinkBox, LinkOverlay, AspectRatio, Image } from "@chakra-ui/react";
 
-const ImageBlockCTA = ({ url, imageSrc, title }) => (
+const ImageBlockCTA = ({ url, imageSrc, title, height, width }) => (
   <LinkBox
     as="article"
     // flex="0 0 100%"
@@ -9,7 +9,13 @@ const ImageBlockCTA = ({ url, imageSrc, title }) => (
     // flexBasis={["100%", "calc(33.33333% - 0.25rem)"]}
   >
     <AspectRatio ratio={16 / 9}>
-      <Image src={imageSrc} objectPosition="top left" alt={title} />
+      <Image
+        src={imageSrc}
+        objectPosition="top left"
+        alt={title}
+        htmlHeight={height}
+        htmlWidth={width}
+      />
     </AspectRatio>
     <LinkOverlay
       href={url}
