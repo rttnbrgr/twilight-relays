@@ -12,7 +12,10 @@ import useToggle from "../hooks/index";
 const SEO = {
   title: "Twilight Relays 2022",
   description: "Welcome to the homepage of Twilight Relays",
-  siteName: "Twilight Relays 2022"
+  siteName: "Twilight Relays 2022",
+  currentURL: "https://twilight-relays.com",
+  previewImage:
+    "https://res.cloudinary.com/rttnbrgr/image/upload/v1649540396/Twilight%20Relays/Open_Graph_IMG.jpg"
 };
 
 const Index = () => {
@@ -25,21 +28,9 @@ const Index = () => {
         <title>{SEO.title}</title>
         <meta name="description" content={SEO.description}></meta>
 
-        {/* Twitter */}
-        {/* <meta name="twitter:card" content="summary" key="twcard" />
-        <meta
-          name="twitter:creator"
-          content={SEO.twitterHandle}
-          key="twhandle"
-        /> */}
-
         {/* Open Graph */}
-        {/* <meta property="og:url" content={SEO.currentURL} key="ogurl" />
-        <meta
-          property="og:image"
-          content={SEO.previewImage.src}
-          key="ogimage"
-        /> */}
+        <meta property="og:url" content={SEO.currentURL} key="ogurl" />
+        <meta property="og:image" content={SEO.previewImage} key="ogimage" />
         <meta property="og:site_name" content={SEO.siteName} key="ogsitename" />
         <meta property="og:title" content={SEO.title} key="ogtitle" />
         <meta
