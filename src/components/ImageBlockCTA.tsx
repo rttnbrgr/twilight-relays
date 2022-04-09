@@ -9,7 +9,7 @@ const ImageBlockCTA = ({ url, imageSrc, title }) => (
     // flexBasis={["100%", "calc(33.33333% - 0.25rem)"]}
   >
     <AspectRatio ratio={16 / 9}>
-      <Image src={imageSrc} objectPosition="top left" />
+      <Image src={imageSrc} objectPosition="top left" alt={title} />
     </AspectRatio>
     <LinkOverlay
       href={url}
