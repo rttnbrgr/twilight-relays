@@ -83,6 +83,8 @@ export const Banner = ({ toggleIsOpen, isOpen }: BannerProps) => {
           alt='"Twilight Relays"'
           src="https://twilight-relays.surge.sh/assets/banner.svg"
           minW="0"
+          htmlHeight={48}
+          htmlWidth={541}
         />
       </Container>
     </Flex>
