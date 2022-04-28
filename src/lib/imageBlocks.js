@@ -14,8 +14,7 @@ export const imageBlocks = [
     width: '352'
   },
   {
-    url: "https://twilightrelays.runnerspace.com/eprofile.php?event_id=96&amp;do=videos&amp;video_id=273064",
-    // imageSrc: "https://twilight-relays.surge.sh/assets/TR18_WebSquares-3.jpg",
+    url: "https://twilightrelays.runnerspace.com/eprofile.php?event_id=96&do=videos&video_id=327416",
     imageSrc: "https://res.cloudinary.com/rttnbrgr/image/upload/v1649538136/Twilight%20Relays/TR18_WebSquares-3.jpg",
     title: "Live Webcast",
     height: '352',
