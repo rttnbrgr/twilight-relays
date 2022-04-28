@@ -41,7 +41,7 @@ const Index = () => {
       </Head>
       <Box>
         <Banner toggleIsOpen={toggleIsOn} isOpen={isOn} />
-        <Nav isOpen={isOn} />
+        {/* <Nav isOpen={isOn} /> */}
 
         {/* Info */}
         <Box layerStyle="sectionBase">

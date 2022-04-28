@@ -14,7 +14,7 @@ const bannerStyles: FlexProps = {
   justifyContent: "center",
   alignItems: "center",
   py: {
-    base: 2,
+    base: 3,
     sm: 4,
     md: 8
   },
@@ -27,19 +27,19 @@ const bannerStyles: FlexProps = {
 const bannerChildStyles: BoxProps = {
   display: "flex",
   justifyContent: {
-    base: "space-between",
+    base: "center",
     sm: "center"
   },
   height: {
     base: "10",
     sm: "12",
     md: "14"
-  },
-  pl: {
-    base: 0,
-    sm: 4,
-    md: 8
   }
+  // pl: {
+  //   base: 0,
+  //   sm: 4,
+  //   md: 8
+  // }
 };
 
 type BannerProps = {
@@ -53,7 +53,7 @@ export const Banner = ({ toggleIsOpen, isOpen }: BannerProps) => {
   return (
     <Flex {...bannerStyles}>
       <Container {...bannerChildStyles}>
-        <IconButton
+        {/* <IconButton
           aria-label="Menu"
           icon={activeIcon}
           size="lg"
@@ -78,7 +78,7 @@ export const Banner = ({ toggleIsOpen, isOpen }: BannerProps) => {
           }}
           flexBasis="6"
           flexShrink={0}
-        />
+        /> */}
         <ChakraImage
           alt='"Twilight Relays"'
           src="https://twilight-relays.surge.sh/assets/banner.svg"
