@@ -43,6 +43,32 @@ const Index = () => {
         <Banner toggleIsOpen={toggleIsOn} isOpen={isOn} />
         {/* <Nav isOpen={isOn} /> */}
 
+        {/* Schedule */}
+        <Box id="schedule" layerStyle="sectionBase">
+          <Container>
+            <SectionHeader>Schedule</SectionHeader>
+            <SimpleGrid
+              display="grid"
+              width="100%"
+              columns={{
+                base: 1,
+                sm: 2
+              }}
+              columnGap="4em"
+              rowGap="4"
+              maxWidth={{
+                base: "316px",
+                sm: "initial"
+              }}
+              mx={{ base: "auto" }}
+            >
+              {schedule.map((x, i) => (
+                <ScheduleItem {...x} key={i} />
+              ))}
+            </SimpleGrid>
+          </Container>
+        </Box>
+
         {/* Info */}
         <Box layerStyle="sectionBase">
           <Container>
@@ -83,32 +109,6 @@ const Index = () => {
                   height={height}
                   width={width}
                 />
-              ))}
-            </SimpleGrid>
-          </Container>
-        </Box>
-
-        {/* Schedule */}
-        <Box id="schedule" layerStyle="sectionBase">
-          <Container>
-            <SectionHeader>Schedule</SectionHeader>
-            <SimpleGrid
-              display="grid"
-              width="100%"
-              columns={{
-                base: 1,
-                sm: 2
-              }}
-              columnGap="4em"
-              rowGap="4"
-              maxWidth={{
-                base: "316px",
-                sm: "initial"
-              }}
-              mx={{ base: "auto" }}
-            >
-              {schedule.map((x, i) => (
-                <ScheduleItem {...x} key={i} />
               ))}
             </SimpleGrid>
           </Container>
