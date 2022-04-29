@@ -81,7 +81,7 @@ export const Banner = ({ toggleIsOpen, isOpen }: BannerProps) => {
         /> */}
         <ChakraImage
           alt='"Twilight Relays"'
-          src="https://twilight-relays.surge.sh/assets/banner.svg"
+          src="https://res.cloudinary.com/rttnbrgr/image/upload/v1649538136/Twilight%20Relays/banner.svg"
           minW="0"
           htmlHeight={48}
           htmlWidth={541}
