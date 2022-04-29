@@ -99,6 +99,27 @@ const Index = () => {
                   the awesome team over at Athletic.net
                 </Text>
               </LinkBox>
+              <LinkBox
+                as="article"
+                rounded="md"
+                p={2}
+                px={3}
+                _hover={{
+                  background: "whiteAlpha.100"
+                }}
+              >
+                <LinkOverlay
+                  isExternal
+                  href="https://storage.googleapis.com/anet_user_files/meet/tf/440410/meetprogram.pdf"
+                  color="altBg"
+                >
+                  <Text textStyle="bodyLarge">Meet Program</Text>
+                </LinkOverlay>
+                <Text textStyle="bodyLarge" mb="4">
+                  Now available. Find your athlete and what heat they will be
+                  competing in.
+                </Text>
+              </LinkBox>
             </VStack>
           </Container>
         </Box>
