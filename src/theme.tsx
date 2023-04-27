@@ -14,15 +14,16 @@ const breakpoints = createBreakpoints({
 });
 
 const colorsBrand = {
-  black: "#16161D",
+  black: "#111",
   volt: "#d7df22",
+  ltBlue: "#72A4D4",
   white: "white"
 };
 
 const colorTokens = {
   bg: colorsBrand.black,
   onBg: colorsBrand.white,
-  altBg: colorsBrand.volt,
+  altBg: colorsBrand.ltBlue,
   onAlt: colorsBrand.black // not in use
 };
 
