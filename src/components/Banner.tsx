@@ -31,15 +31,8 @@ const bannerChildStyles: BoxProps = {
     sm: "center"
   },
   height: {
-    base: "10",
-    sm: "12",
-    md: "14"
+    base: "14"
   }
-  // pl: {
-  //   base: 0,
-  //   sm: 4,
-  //   md: 8
-  // }
 };
 
 type BannerProps = {
@@ -53,38 +46,12 @@ export const Banner = ({ toggleIsOpen, isOpen }: BannerProps) => {
   return (
     <Flex {...bannerStyles}>
       <Container {...bannerChildStyles}>
-        {/* <IconButton
-          aria-label="Menu"
-          icon={activeIcon}
-          size="lg"
-          height="auto"
-          flexBasis="10"
-          flexGrow="0"
-          flexShrink="0"
-          display={{
-            base: "inline-flex",
-            sm: "none"
-          }}
-          onClick={toggleIsOpen}
-          bg="transparent"
-          _hover={{
-            bg: "transparent"
-          }}
-        />
-        <Spacer
-          display={{
-            base: "inline-flex",
-            sm: "none"
-          }}
-          flexBasis="6"
-          flexShrink={0}
-        /> */}
         <ChakraImage
           alt='"Twilight Relays"'
-          src="https://res.cloudinary.com/rttnbrgr/image/upload/v1649538136/Twilight%20Relays/banner.svg"
+          src="https://res.cloudinary.com/rttnbrgr/image/upload/v1682619484/Asset_1_ocpupa.svg"
           minW="0"
-          htmlHeight={48}
-          htmlWidth={541}
+          htmlHeight={141}
+          htmlWidth={900}
         />
       </Container>
     </Flex>
