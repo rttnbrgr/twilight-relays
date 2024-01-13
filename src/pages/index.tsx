@@ -72,7 +72,10 @@ const Index = () => {
                   background: "whiteAlpha.100"
                 }}
               >
-                <LinkOverlay href="https://twilightrelays.com" color="altBg">
+                <LinkOverlay
+                  href="https://niketrackclinic.com/twilight-relays"
+                  color="altBg"
+                >
                   <Text textStyle="bodyLarge">2023 Update</Text>
                 </LinkOverlay>
                 <Text textStyle="bodyLarge" mb="4">
